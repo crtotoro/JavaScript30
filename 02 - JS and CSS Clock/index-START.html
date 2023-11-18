@@ -13,6 +13,7 @@
         <div class="hand hour-hand"></div>
         <div class="hand min-hand"></div>
         <div class="hand second-hand"></div>
+        <div class="middle"></div>
       </div>
     </div>
 
@@ -69,8 +70,25 @@
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
-    .min-hand {
-      background-color: red;
+    .middle {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+    .hour-hand {
+      width: 40%;
+      left: 10%;
+    }
+
+    .second-hand {
+      height: 4px;
     }
 
   </style>
