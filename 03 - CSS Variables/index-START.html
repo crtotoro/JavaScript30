@@ -23,6 +23,22 @@
 
   <style>
 
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
+
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -44,8 +60,29 @@
       width: 100px;
     }
   </style>
-
   <script>
+    const spacingSelector = document.getElementById('spacing');
+    const blurSelector = document.getElementById('blur');
+    const baseColorSelector = document.getElementById('base');
+
+    function updateSpacing() {
+      let spacing = spacingSelector.value;
+      
+    }
+    
+    function updateBlur() {
+      let blur = blurSelector.value;
+      
+    }
+    
+    function updateBaseColor() {
+      let baseColor = baseColorSelector.value;
+      
+    }
+    
+    spacingSelector.addEventListener('change', updateSpacing);
+    blurSelector.addEventListener('change', updateBlur);
+    baseColorSelector.addEventListener('change', updateBaseColor);
   </script>
 
 </body>
